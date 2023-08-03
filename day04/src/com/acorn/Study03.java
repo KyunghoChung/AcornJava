@@ -28,31 +28,44 @@ public class Study03 {
         // 검색할 문자를 입력받아:
         // 일치 문자열 개수: 증감 연산자
         // 출력
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
+//
+//        // Input the string
+//        System.out.print("Enter a string: ");
+//        String inputString = scanner.nextLine();
+//
+//        // Convert the string to an array of characters
+//        char[] charArray = inputString.toCharArray();
+//
+//        // Input the character to search for
+//        System.out.print("Enter a character to search for: ");
+//        char searchChar = scanner.next().charAt(0);
+//
+//        // Count the occurrences of the search character
+//        int count = 0;
+//        for (char c : charArray) {
+//            if (c == searchChar) {
+//                count++;
+//            }
+//        }
+//
+//        // Print the result
+//        System.out.println("Number of occurrences of '" + searchChar + "' in the input string: " + count);
+        String[] daysOfWeek = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
 
-        // Input the string
-        System.out.print("Enter a string: ");
-        String inputString = scanner.nextLine();
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.print("Enter the index number (0-6): ");
+            int index = scanner.nextInt();
 
-        // Convert the string to an array of characters
-        char[] charArray = inputString.toCharArray();
-
-        // Input the character to search for
-        System.out.print("Enter a character to search for: ");
-        char searchChar = scanner.next().charAt(0);
-
-        // Count the occurrences of the search character
-        int count = 0;
-        for (char c : charArray) {
-            if (c == searchChar) {
-                count++;
+            if (index >= 0 && index < daysOfWeek.length) {
+                String day = daysOfWeek[index];
+                System.out.println("The day at index " + index + " is: " + day);
+            } else {
+                System.out.println("Invalid index. Please enter a number between 0 and " + (daysOfWeek.length - 1));
             }
+        } catch (Exception e) {
+            System.out.println("Invalid input. Please enter a valid integer index.");
         }
-
-        // Print the result
-        System.out.println("Number of occurrences of '" + searchChar + "' in the input string: " + count);
-
-        scanner.close();
 
     }
 }
