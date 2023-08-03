@@ -1,4 +1,4 @@
-package com.acorn.practice;
+package com.acorn;
 
 import java.util.Scanner;
 
