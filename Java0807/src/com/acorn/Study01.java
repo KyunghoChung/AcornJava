@@ -119,7 +119,5 @@ public class Study01 {
 //
 //        System.out.println("It's " + season);
 //    }
-    public void study03(){
 
-    }
 }
