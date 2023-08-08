@@ -11,18 +11,23 @@ package study.class01.study01;
 // 수식어 example: 접근지정자(ex. public)
 public class Main {
     public static void main(String[] args) {
-        Employee emp = new Employee();
-        System.out.println(emp);
-        System.out.println(emp.iEmpNo);
-        System.out.println(emp.sEmpName);
-        System.out.println(emp.dEmpSalary);
 
-        Employee emp2 = new Employee(1, "홍길동", 1000.0);
-        System.out.println(emp2);
-        System.out.println(emp2.iEmpNo);
-        System.out.println(emp2.sEmpName);
-        System.out.println(emp2.dEmpSalary);
+        Employee employee01 = new Employee(1, "홍길동", 1000.0);
 
-        System.out.println(emp2.getRealSalary(7.5));
+        double dRet = employee01.getRealSalary(7.5);
+        System.out.println("실수령액: " + dRet);
+//        Employee emp = new Employee();
+//        System.out.println(emp);
+//        System.out.println(emp.iEmpNo);
+//        System.out.println(emp.sEmpName);
+//        System.out.println(emp.dEmpSalary);
+//
+//        Employee emp2 = new Employee(1, "홍길동", 1000.0);
+//        System.out.println(emp2);
+//        System.out.println(emp2.iEmpNo);
+//        System.out.println(emp2.sEmpName);
+//        System.out.println(emp2.dEmpSalary);
+//
+//        System.out.println(emp2.getRealSalary(7.5));
     }
 }
