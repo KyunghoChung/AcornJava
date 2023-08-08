@@ -16,6 +16,8 @@ public class Main {
 
         double dRet = employee01.getRealSalary(7.5);
         System.out.println("실수령액: " + dRet);
+        double dRet2 = employee01.getRealSalary(7.5, 12);
+        System.out.println("실수령액: " + dRet2);
 //        Employee emp = new Employee();
 //        System.out.println(emp);
 //        System.out.println(emp.iEmpNo);

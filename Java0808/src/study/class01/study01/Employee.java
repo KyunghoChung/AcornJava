@@ -19,13 +19,14 @@ public class Employee {
         this.dEmpSalary = dEmpSalary;
     }
 
-    // 메서드 영역 - 동적 메서드
-    public double getRealSalary(double ratio){
-        double resultSalary;
-        resultSalary = this.dEmpSalary - (this.dEmpSalary * ratio / 100);
+    // 메서드 영역 - 동적
 
-        return resultSalary;
-    }
+    /**
+     * 월급에서 차지하는 전체 수령액에서 빠지는 금액
+     * @param ratio: 세율(%)
+     * @return 실수령액
+     */
+
     // Getter/Setter
     public int getiEmpNo() {return iEmpNo;}
     public void setiEmpNo(int iEmpNo) {this.iEmpNo = iEmpNo;}
@@ -36,4 +37,24 @@ public class Employee {
     public double getdEmpSalary() {return dEmpSalary;}
     public void setdEmpSalary(double dEmpSalary) {this.dEmpSalary = dEmpSalary;}
 
+    public double getRealSalary(double ratio){
+        double resultSalary;
+        resultSalary = this.dEmpSalary - (this.dEmpSalary * ratio / 100);
+
+        return resultSalary;
+    }
+    // 메서드 오버로딩
+    public double getRealSalary(double ratio, int months){
+        double resultSalary = 0.0;
+        if(months == 12){
+            resultSalary = (dEmpSalary*months) - (((dEmpSalary * months) +(dEmpSalary * 1.3)) * ratio / 100);
+        }
+        else if((months >= 1) && (months < 12)){
+            resultSalary = (dEmpSalary*months) - ((dEmpSalary * months) * ratio / 100);
+        }
+
+
+
+        return resultSalary;
+    }
 }
