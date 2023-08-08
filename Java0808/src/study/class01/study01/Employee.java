@@ -19,13 +19,7 @@ public class Employee {
         this.dEmpSalary = dEmpSalary;
     }
 
-    // 메서드 영역 - 동적
 
-    /**
-     * 월급에서 차지하는 전체 수령액에서 빠지는 금액
-     * @param ratio: 세율(%)
-     * @return 실수령액
-     */
 
     // Getter/Setter
     public int getiEmpNo() {return iEmpNo;}
@@ -37,6 +31,13 @@ public class Employee {
     public double getdEmpSalary() {return dEmpSalary;}
     public void setdEmpSalary(double dEmpSalary) {this.dEmpSalary = dEmpSalary;}
 
+    // 메서드 영역 - 동적
+
+    /**
+     * 월급에서 차지하는 전체 수령액에서 빠지는 금액
+     * @param ratio: 세율(%)
+     * @return 실수령액
+     */
     public double getRealSalary(double ratio){
         double resultSalary;
         resultSalary = this.dEmpSalary - (this.dEmpSalary * ratio / 100);
