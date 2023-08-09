@@ -1,4 +1,4 @@
-package stdudy.static01;
+package study.static01;
 
 public class StaticTest {
 	//필드영역
@@ -12,7 +12,7 @@ public class StaticTest {
 	// 정적 메소드
 	public static void printInfo() {
 		System.out.println("number1 = " + number1);
-		System.out.println("number2 = " + number2);
+//		System.out.println("number2 = " + number2);
 	}
 	
 	// 동적메소드
