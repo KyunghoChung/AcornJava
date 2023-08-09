@@ -24,6 +24,24 @@ public class Add {
     }
 
     // 메서드 오버로딩 영역
+    public double addOperation(double dAddFirstNum, double dAddSecondNum){
+        double dAddResultValue;
+        dAddResultValue = dAddFirstNum + dAddSecondNum;
+        return dAddResultValue;
+    }
+
+//    public double addOperation(int iAddFirstNum, double iAddSecondNum){
+//        double iAddResultValue;
+//        iAddResultValue = iAddFirstNum + iAddSecondNum;
+//        return iAddResultValue;
+//    }
+//
+//    public double addOperation(double iAddFirstNum, int iAddSecondNum){
+//        double iAddResultValue;
+//        iAddResultValue = iAddFirstNum + iAddSecondNum;
+//        return iAddResultValue;
+//    }
+
 }
 
 
