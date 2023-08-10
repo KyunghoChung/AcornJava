@@ -1,7 +1,7 @@
 package study.class_.inheritance.main;
 
 import study.class_.inheritance.BusinessPerson;
-import study.class_.inheritance.Person;
+//import study.class_.inheritance.Person;
 
 // 상속(inheritance): 상위 클래스의 멤버들을 확장해서 하위 클래스를 설계하는 방법
 // 상위 클래스(super class), 부모 클래스(parent class), 기본 클래스(base class)
@@ -12,6 +12,19 @@ import study.class_.inheritance.Person;
 // 자바는 다중 상속이 금지되어있다.
 // 상속 관계에서의 생성자 호출 순서
 
+// 부모(상위) - 자식(하위) 관계: 상속
+// 상속 표기 방법: public class 클래스명1(자식) extends 클래스명2(부모)
+// 자식 IS-A 부모
+// 자식 객체와 부모 객체는 동일한 곳(힙 영역)에 위치
+// 자식은 부모가 (허용한)필드와 (허용한)메소드에 접근 가능
+//      자식 객체.(부모 메소드와 자신의 메소드) <- 형태로 호출 가능
+
+// 오버라이드(Override)
+// 부모와 자식이 동일한 메소드를 갖는 경우
+// : 자식 메소드 우선 실행
+// : 애노테이션(@Override)은 자식 메소드를 먼저 실행
+// 명시적으로 지시
+// 부모의 메소드와
 public class Main01 {
     public static void main(String[] args) {
 //        Person p1 = new Person();
@@ -26,7 +39,8 @@ public class Main01 {
         BusinessPerson p4 = new BusinessPerson("에이콘", "에어콘");
         System.out.println(p4);
 
-
+        BusinessPerson p5 = new BusinessPerson("test1", "test2");
+        System.out.println(p5);
 //        person.setName("나피디");
 //        person.getName();
 //        System.out.println(person);
