@@ -1,12 +1,14 @@
 package com.acorn.inheritance;
 
-import com.acorn.inheritance.AudioTVParent;
-
-public class TV extends AudioTVParent {
+public class TVChild extends AudioTVParent {
     private int size;
 
-    public TV(){ }
-    public TV(boolean power, int volume, int size){
+    public TVChild(){
+        // super
+        this(true, 10, 20);
+        System.out.println("I'm a TV Child");
+    }
+    public TVChild(boolean power, int volume, int size){
         super(power, volume);
         this.size = size;
     }

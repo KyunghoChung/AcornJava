@@ -4,7 +4,9 @@ public class AudioTVParent {
     private boolean power;
     private int volume;
 
-    public AudioTVParent(){}
+    public AudioTVParent(){
+        System.out.println("I'm a parent");
+    }
     public AudioTVParent(boolean power, int volume){
         this.power = power;
         this.volume = volume;
