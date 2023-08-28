@@ -13,7 +13,11 @@ public class Order {
         int totalPrice = 0;
         for (CartItem item : items) {
             totalPrice += item.getProduct().getPrice() * item.getQuantity();
+            item.decreaseProductStock();
         }
         return totalPrice;
+    }
+    public void completeOrder(){
+        items.clear();
     }
 }

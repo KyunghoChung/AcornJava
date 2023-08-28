@@ -17,4 +17,7 @@ public class Cart {
     public ArrayList<CartItem> getItems() {
         return items;
     }
+    public void clearCart(){
+        items.clear();
+    }
 }
